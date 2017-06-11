@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
-	<package name="aaa" extends="struts-default" namespace="/front">
+	<package name="login" extends="struts-default" namespace="/front">
 		<action name="login" class="action.LoginAction">
 			<result name="success">/showList.jsp</result>
 			<result name="fail">/login.jsp</result>
 		</action>
 	</package>
-	<package name="bbb" extends="struts-default" namespace="/info">
+	<package name="info" extends="struts-default" namespace="/info">
 		<action name="infoAction" class="action.InfoAction">
 			<result name="success">/index.jsp</result>
 			<result name="fail">/login.jsp</result>
