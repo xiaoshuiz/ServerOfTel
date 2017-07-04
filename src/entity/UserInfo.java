@@ -1,15 +1,9 @@
 package entity;
 
 public class UserInfo {
-	private int userId;
-	private String name,password,url;
+	private String name,password,nickname;
 	
-	public int getUserId() {
-		return userId;
-	}
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
+	
 	public String getName() {
 		return name;
 	}
@@ -22,11 +16,12 @@ public class UserInfo {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getUrl() {
-		return url;
+	public String getNickName() {
+		return nickname;
 	}
-	public void setUrl(String url) {
-		this.url = url;
+	public void setNickName(String nickname) {
+		this.nickname= nickname;
 	}
+	
 
 }

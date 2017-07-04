@@ -11,17 +11,17 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import dao.UserInfoDao;
 
-public class LoginAction extends ActionSupport{
-	public LoginAction(){
-		System.out.println("LoginAction");
+public class RegisterAction extends ActionSupport{
+	public RegisterAction(){
+		System.out.println("registerAction");
 	}
 	private String account;
 	public String getAccount() {
-		System.out.println("LoginAction getAccount");
+		System.out.println("registerAction getAccount");
 		return account;
 	}
 	public void setAccount(String account) {
-		System.out.println("LoginAction setAccount");
+		System.out.println("registerAction setAccount");
 		this.account = account;
 	}
 	private String password;
@@ -30,6 +30,13 @@ public class LoginAction extends ActionSupport{
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	private String nickname;
+	public String getNickName() {
+		return nickname;
+	}
+	public void setNickName(String nickname) {
+		this.nickname = nickname;
 	}
 	public String execute() throws Exception {
 		
@@ -44,31 +51,13 @@ public class LoginAction extends ActionSupport{
 				
 		//session.put("account", "111");
 		
-		System.out.println("LoginAction execute");
+		System.out.println("RegisterAction execute");
 		UserInfoDao uid = new UserInfoDao();
-		if(uid.login(account,password)){
+		if(uid.register(account,password,nickname)){
 			return "success";
 		}
 		return "fail";
 	}
 	
-public String login() throws Exception {
-		
-		HttpServletRequest request = ServletActionContext.getRequest();
-		//ʹ��request
-		HttpServletResponse response = ServletActionContext.getResponse();
-		//ʹ��response
-		ServletContext application = ServletActionContext.getServletContext();
-		//ʹ��application
-		Map session = ActionContext.getContext().getSession();
-		//ʹ��session
-				
-		session.put("account", "111");
-		
-		System.out.println("LoginAction execute");
-		if(account.equals(password)){
-			return "success";
-		}
-		return "fail";
-	}
+
 }

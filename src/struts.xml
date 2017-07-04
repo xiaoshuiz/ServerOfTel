@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
-	<package name="login" extends="struts-default" namespace="/front">
-		<action name="login" class="action.LoginAction">
-			<result name="success">/showList.jsp</result>
+	<package name="login" extends="struts-default" namespace="/login">
+		<action name="loginAction" class="action.LoginAction">
+			<result name="success">/main.jsp</result>
 			<result name="fail">/login.jsp</result>
+		</action>
+	</package>
+	<package name="register" extends="struts-default" namespace="/register">
+		<action name="registerAction" class="action.RegisterAction">
+			<result name="success">/login.jsp</result>
+			<result name="fail">/register.jsp</result>
 		</action>
 	</package>
 	<package name="info" extends="struts-default" namespace="/info">

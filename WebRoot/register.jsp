@@ -23,17 +23,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+   <form action="register/registerAction.action" method="post">  
     <div id="register">  
         <h1>register</h1>  
-        <form method="post">  
-      		<input type="text" required="required" placeholder="昵称" name="p"></input>   
-            <input type="text" required="required" placeholder="用户名" name="u"></input>  
-            <input type="password" required="required" placeholder="密码" name="p"></input> 
+       
+      		<input type="text" required="required" placeholder="昵称" name="nickname"></input>   
+            <input type="text" required="required" placeholder="用户名" name="account"></input>  
+            <input type="password" required="required" placeholder="密码" name="password"></input> 
             
             <button class="but" type="submit">注册</button>  
-        </form>  
+        
         
     </div>  
+    </form>  
 
 
     
